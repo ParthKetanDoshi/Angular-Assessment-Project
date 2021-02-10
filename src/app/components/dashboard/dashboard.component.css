@@ -1,0 +1,9 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.card {
+    background-color: #333;
+    margin: 10px;
+    padding: 20px;
+}
