@@ -1,0 +1,21 @@
+.toolbar {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 80px;
+display: flex;
+align-items: center;
+background-color: #333;
+color: white;
+font-weight: 600;
+}
+
+.toolbar img {
+margin: 0 16px;
+}
+
+.toolbar span{
+    font-family: Roboto,Helvetica Neue,Arial,sans-serif!important;
+    font-size: 40px;
+}
