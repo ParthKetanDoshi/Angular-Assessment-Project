@@ -14,14 +14,14 @@ export class ProfileComponent implements OnInit {
   constructor(private route: ActivatedRoute,
     private userData:UserfetchService) { 
       this.userData.getData().subscribe(userData => {
-        console.log(userData)
+        // console.log(userData)
         this.data=userData
       })
     }
 
   ngOnInit(): void {
     this.userid = this.route.snapshot.params['id'];
-    console.log(this.userid)
+    // console.log(this.userid)
   }
 
 }

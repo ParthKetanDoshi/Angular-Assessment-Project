@@ -11,7 +11,7 @@ export class DashboardComponent implements OnInit {
 
   constructor(private userData:UserServiceService) { 
     this.userData.getData().subscribe(userData => {
-      console.log(userData)
+      // console.log(userData)
       this.data=userData
     })
   }

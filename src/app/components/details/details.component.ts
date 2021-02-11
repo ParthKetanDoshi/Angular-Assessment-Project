@@ -11,7 +11,7 @@ export class DetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.userid);
+    // console.log(this.userid);
   }
 
 }
