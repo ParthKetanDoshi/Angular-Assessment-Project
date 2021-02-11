@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
 import { MatCardModule } from "@angular/material/card";
 import { MatButtonModule } from '@angular/material/button';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -14,6 +15,15 @@ import { DetailsComponent } from './components/details/details.component';
 import { AlbumsComponent } from './components/albums/albums.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+const appRoutes: Routes = [
+  {path:'', component: HomeComponent},
+  {path:'login', component: LoginComponent},
+  {path:'dashboard', component: DashboardComponent},
+  {path:'details', component: DetailsComponent},
+  {path:'albums', component: AlbumsComponent},
+  {path:'posts', component: PostsComponent}
+]
 
 @NgModule({
   declarations: [
@@ -32,7 +42,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     HttpClientModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
