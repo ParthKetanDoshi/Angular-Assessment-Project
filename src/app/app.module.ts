@@ -15,11 +15,13 @@ import { DetailsComponent } from './components/details/details.component';
 import { AlbumsComponent } from './components/albums/albums.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes = [
   {path:'', component: HomeComponent},
   {path:'login', component: LoginComponent},
   {path:'dashboard', component: DashboardComponent},
+  {path:'profile', component: ProfileComponent},
   {path:'details', component: DetailsComponent},
   {path:'albums', component: AlbumsComponent},
   {path:'posts', component: PostsComponent}
@@ -35,7 +37,8 @@ const appRoutes: Routes = [
     DashboardComponent,
     DetailsComponent,
     AlbumsComponent,
-    PostsComponent
+    PostsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
