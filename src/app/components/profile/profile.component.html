@@ -1,7 +1,7 @@
 <ng-container *ngFor="let item of data">
     <ng-container *ngIf="item.id == userid">
         <div>
-            <h3>{{item.name}}</h3><h5>@{{item.username}}</h5>
+            <h3>{{ item.name }}</h3><h5>@{{ item.username }}</h5>
         </div>
         <mat-tab-group class="tabgroup">
             <mat-tab label="Details"><app-details [userid]="userid"></app-details></mat-tab>

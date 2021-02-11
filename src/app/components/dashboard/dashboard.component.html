@@ -2,7 +2,7 @@
     <ng-container *ngFor="let item of data">
         <!-- Update with logged in User -->
         <mat-card class="card" *ngIf="item.id != 1">
-                <mat-card-title>{{item.id}}. {{ item.name }} <h4> @{{item.username}} </h4></mat-card-title>
+                <mat-card-title>ID{{ item.id }}- {{ item.name }} <h4> @{{ item.username }} </h4></mat-card-title>
                 <mat-card-subtitle>{{ item.company.name }}</mat-card-subtitle>
                 <mat-card-content>EMail ID: {{ item.email }}<br>Contact No.: {{ item.phone }}</mat-card-content>
                 <mat-card-actions>
