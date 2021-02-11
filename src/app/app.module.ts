@@ -24,7 +24,7 @@ const appRoutes: Routes = [
   {path:'', component: HomeComponent},
   {path:'login', component: LoginComponent},
   {path:'dashboard', component: DashboardComponent},
-  {path:'profile', component: ProfileComponent},
+  {path:'profile/:id', component: ProfileComponent},
   {path:'details', component: DetailsComponent},
   {path:'albums', component: AlbumsComponent},
   {path:'posts', component: PostsComponent}
