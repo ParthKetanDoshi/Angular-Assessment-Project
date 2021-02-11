@@ -17,8 +17,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DetailsComponent } from './components/details/details.component';
 import { AlbumsComponent } from './components/albums/albums.component';
 import { PostsComponent } from './components/posts/posts.component';
+
+import { ProfileComponent } from './components/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes = [
   {path:'', component: HomeComponent},
