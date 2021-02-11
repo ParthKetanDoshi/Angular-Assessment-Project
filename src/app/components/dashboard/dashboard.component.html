@@ -6,7 +6,7 @@
                 <mat-card-subtitle>{{ item.company.name }}</mat-card-subtitle>
                 <mat-card-content>EMail ID: {{ item.email }}<br>Contact No.: {{ item.phone }}</mat-card-content>
                 <mat-card-actions>
-                    <button mat-raised-button color="primary">View Profile</button>
+                    <a routerLink="/profile"><button mat-raised-button color="primary">View Profile</button></a>
                 </mat-card-actions>
         </mat-card>
     </ng-container>
