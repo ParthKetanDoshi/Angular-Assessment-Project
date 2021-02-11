@@ -1,1 +1,5 @@
-<p>details works!</p>
+<ng-container *ngFor="let item of data">
+    <ng-container *ngIf="item.id == userid">
+        <p>{{ item.name }}</p>
+    </ng-container>
+</ng-container>
