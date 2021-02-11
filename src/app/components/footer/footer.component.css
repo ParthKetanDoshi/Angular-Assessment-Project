@@ -9,4 +9,16 @@
     background-color: #333;
     color: white;
     z-index: 1;
+    font-weight: 300;
+}
+
+.footer span{
+    /* margin-left: 10px; */
+    text-align: center;
+    width: 100%;
+}
+
+.footer a{
+    color: white;
+    font-weight: 500;
 }
