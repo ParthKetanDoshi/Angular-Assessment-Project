@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { UserfetchService } from "./service/userfetch.service";
 
 @Component({
   selector: 'app-details',
@@ -7,8 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
   @Input() userid: number;
+  data: any;
 
-  constructor() { }
+  constructor(private userData: UserfetchService) { 
+    this.userData.getData().subscribe(userData => {
+      // console.log(userData)
+      this.data=userData
+    })
+  }
 
   ngOnInit(): void {
     // console.log(this.userid);
