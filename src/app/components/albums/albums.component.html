@@ -1,14 +1,13 @@
 <div class="container">
     <ng-container *ngFor="let album of albumData">
         <ng-container *ngIf="album.userId == userid">
-            <mat-card>
-                <mat-card-title>
+            <!-- <a>
+                <button class="button" mat-raised-button color="primary">
                     {{album.id}}. {{album.title}}
-                </mat-card-title>
-                <mat-card-contetn>
-                    {{album.id}}
-                </mat-card-contetn>
-            </mat-card>
+                </button>
+            </a> -->
+            <h3> {{album.id}}. {{album.title}} </h3>
+            <p>{{album.title}}</p>
         </ng-container>
     </ng-container>
 </div>

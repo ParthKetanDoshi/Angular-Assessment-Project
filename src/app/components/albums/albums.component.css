@@ -1,12 +1,15 @@
 body{
-    overflow: hidden;
+    overflow-y: hidden;
 }
 .container{
-    overflow-y: auto;
-    overflow-x: hidden;
-    height: 75%;
+    overflow: auto;
+    height: 750px;
     width: 100%;
 }
-p {
+.button{
+    width: 100%;
+    margin: 10px;
+}
+h3, p {
     color: #fff;
 }
