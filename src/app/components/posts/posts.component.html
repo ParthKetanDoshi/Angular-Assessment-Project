@@ -1,1 +1,14 @@
-<p>posts works!</p>
+<ng-container *ngFor="let item of data">
+    <ng-container *ngIf="item.userId == userid">
+        <!-- <p>{{item.title}}</p>
+        <p>{{item.body}}</p> -->
+        <mat-card class="card">
+            <mat-card-title>
+                {{item.id}}. {{item.title}}
+            </mat-card-title>
+            <mat-card-content>
+                {{item.body}}
+            </mat-card-content>
+        </mat-card>
+    </ng-container>
+</ng-container>
