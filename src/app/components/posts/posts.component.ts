@@ -13,7 +13,7 @@ export class PostsComponent implements OnInit {
   constructor(private postData: PostfetchService) { 
     this.postData.getData().subscribe(
       postData => {
-        console.log(postData)
+        // console.log(postData)
         this.data=postData
       }
     )
