@@ -1,15 +1,12 @@
 <div class="container">
-    <ng-container *ngFor="let item of albumData">
-        <ng-container *ngIf="item.userId == userid">
-            <!-- <p>
-                {{item.id}}
-            </p> -->
+    <ng-container *ngFor="let album of albumData">
+        <ng-container *ngIf="album.userId == userid">
             <mat-card>
                 <mat-card-title>
-                    {{item.id}}. {{item.title}}
+                    {{album.id}}. {{album.title}}
                 </mat-card-title>
                 <mat-card-contetn>
-                    {{item.id}}
+                    {{album.id}}
                 </mat-card-contetn>
             </mat-card>
         </ng-container>

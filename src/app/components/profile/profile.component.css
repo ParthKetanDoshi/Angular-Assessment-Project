@@ -1,3 +1,6 @@
+body{
+    overflow: hidden;
+}
 div {
     background-color: #333;
     padding: 10px;
