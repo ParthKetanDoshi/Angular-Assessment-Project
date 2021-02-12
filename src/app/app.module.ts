@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatGridListModule } from "@angular/material/grid-list";
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -54,6 +55,7 @@ const appRoutes: Routes = [
     MatFormFieldModule,
     MatInputModule,
     MatTabsModule,
+    MatGridListModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
