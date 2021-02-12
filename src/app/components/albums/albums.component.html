@@ -1,1 +1,17 @@
-<p>albums works!</p>
+<div class="container">
+    <ng-container *ngFor="let item of albumData">
+        <ng-container *ngIf="item.userId == userid">
+            <!-- <p>
+                {{item.id}}
+            </p> -->
+            <mat-card>
+                <mat-card-title>
+                    {{item.id}}. {{item.title}}
+                </mat-card-title>
+                <mat-card-contetn>
+                    {{item.id}}
+                </mat-card-contetn>
+            </mat-card>
+        </ng-container>
+    </ng-container>
+</div>
