@@ -1,5 +1,171 @@
 <ng-container *ngFor="let item of data">
     <ng-container *ngIf="item.id == userid">
-        <p>{{ item.name }}</p>
+        <!-- <p>{{ item.name }}</p> -->
+        <mat-grid-list class="gridlist" cols="5">
+            <mat-grid-tile class="tile" [colspan]=3 [rowspan]=1>
+                <mat-card class="card">
+                    <mat-card-title style="text-align:center;">
+                        <h3>PERSONAL DETAILS</h3>
+                    </mat-card-title>
+                    <mat-card-content>
+                        <table>
+                            <tr>
+                                <td>
+                                    <b>ID</b>
+                                </td>
+                                <td>
+                                    {{item.id}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Name</b>
+                                </td>
+                                <td>
+                                    {{item.name}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Username</b>
+                                </td>
+                                <td>
+                                    {{item.username}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>EMail</b>
+                                </td>
+                                <td>
+                                    {{item.email}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Phone</b>
+                                </td>
+                                <td>
+                                    {{item.phone}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Website</b>
+                                </td>
+                                <td>
+                                    {{item.website}}
+                                </td>
+                            </tr>
+                        </table>
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile class="tile" [colspan]=2 [rowspan]=2>
+                <mat-card class="card">
+                        <mat-card-title style="text-align:center;">
+                            <h3>COMPANY DETAILS</h3>
+                        </mat-card-title>
+                        <mat-card-content>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <b>Name</b>
+                                    </td>
+                                    <td>
+                                        {{item.company.name}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Catchphrase</b>
+                                    </td>
+                                    <td>
+                                        {{item.company.catchPhrase}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Business Strategy</b>
+                                    </td>
+                                    <td>
+                                        {{item.company.bs}}
+                                    </td>
+                                </tr>
+                            </table>
+                        </mat-card-content>
+                    </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile class="tile" [colspan]=1 [rowspan]=1>
+                <mat-card class="card">
+                    <mat-card-title style="text-align:center;">
+                        <h3>GEOGRAPHICAL DETAILS</h3>
+                    </mat-card-title>
+                    <mat-card-content>
+                        <table>
+                            <tr>
+                                <td>
+                                    Latitude
+                                </td>
+                                <td>
+                                    {{item.address.geo.lat}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Longitude
+                                </td>
+                                <td>
+                                    {{item.address.geo.lng}}
+                                </td>
+                            </tr>
+                        </table>
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile class="tile" [colspan]=2 [rowspan]=1>
+                <mat-card class="card">
+                        <mat-card-title style="text-align:center;">
+                            <h3>ADDRESS DETAILS</h3>
+                        </mat-card-title>
+                        <mat-card-content>
+                            <table>
+                                <tr>
+                                    <td>
+                                        Street
+                                    </td>
+                                    <td>
+                                        {{item.address.street}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Suite
+                                    </td>
+                                    <td>
+                                        {{item.address.suite}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        City
+                                    </td>
+                                    <td>
+                                        {{item.address.city}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Zip Code
+                                    </td>
+                                    <td>
+                                        {{item.address.zipcode}}
+                                    </td>
+                                </tr>
+                            </table>
+                        </mat-card-content>
+                    </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
     </ng-container>
 </ng-container>
