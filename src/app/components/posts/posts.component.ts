@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { PostfetchService } from "./service/postfetch.service";
 
 @Component({
   selector: 'app-posts',
@@ -7,8 +8,16 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PostsComponent implements OnInit {
   @Input() userid: number;
+  data: any;
 
-  constructor() { }
+  constructor(private postData: PostfetchService) { 
+    this.postData.getData().subscribe(
+      postData => {
+        console.log(postData)
+        this.data=postData
+      }
+    )
+  }
 
   ngOnInit(): void {
     // console.log(this.userid);
