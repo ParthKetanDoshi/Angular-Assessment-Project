@@ -4,6 +4,7 @@ top: 0;
 left: 0;
 right: 0;
 height: 80px;
+width: 100%;
 display: flex;
 align-items: center;
 background-color: #333;
@@ -19,4 +20,8 @@ margin: 0 16px;
 .toolbar span{
     font-family: Roboto,Helvetica Neue,Arial,sans-serif!important;
     font-size: 40px;
+}
+
+.userbutton{
+    margin-left: 75%;
 }

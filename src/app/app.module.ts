@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatIconModule } from "@angular/material/icon";
+import { MatMenuModule } from "@angular/material/menu";
 import { Routes, RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -61,6 +62,7 @@ const appRoutes: Routes = [
     MatTabsModule,
     MatGridListModule,
     MatIconModule,
+    MatMenuModule,
     FormsModule,
     Ng2SearchPipeModule,
     RouterModule.forRoot(appRoutes)
