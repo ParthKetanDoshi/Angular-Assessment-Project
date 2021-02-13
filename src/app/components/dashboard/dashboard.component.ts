@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from "./service/user-service.service";
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,8 +11,7 @@ export class DashboardComponent implements OnInit {
   data:any;
   value = '';
 
-  constructor(private route: ActivatedRoute,
-    private userData:UserServiceService) { 
+  constructor(private userData:UserServiceService) { 
     this.userData.getData().subscribe(userData => {
       // console.log(userData)
       this.data=userData
@@ -21,7 +19,6 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.loggedinuserid = this.route.snapshot.params['userid'];
   }
 
 }
