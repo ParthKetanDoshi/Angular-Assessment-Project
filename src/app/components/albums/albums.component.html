@@ -1,13 +1,17 @@
 <div class="container">
     <ng-container *ngFor="let album of albumData">
         <ng-container *ngIf="album.userId == userid">
-            <!-- <a>
-                <button class="button" mat-raised-button color="primary">
-                    {{album.id}}. {{album.title}}
-                </button>
-            </a> -->
             <h3> {{album.id}}. {{album.title}} </h3>
-            <p>{{album.title}}</p>
+            <ng-container *ngFor="let photo of photoData">
+                <ng-container *ngIf="photo.albumId == album.id">
+                    <div>
+                        <figure>
+                            <img src="{{photo.url}}">
+                            <figcaption> {{photo.id}}. {{photo.title}} </figcaption>
+                        </figure>
+                    </div>
+                </ng-container>
+            </ng-container>
         </ng-container>
     </ng-container>
 </div>
