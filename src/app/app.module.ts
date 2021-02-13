@@ -22,6 +22,7 @@ import { PostsComponent } from './components/posts/posts.component';
 
 import { ProfileComponent } from './components/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   {path:'', component: HomeComponent},
@@ -58,6 +59,7 @@ const appRoutes: Routes = [
     MatTabsModule,
     MatGridListModule,
     MatIconModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

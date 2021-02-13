@@ -1,13 +1,24 @@
+<mat-card class="searchbarcard">
+  <mat-form-field class="search-form-field">
+    <mat-label>Search by Name, EMail or Company Name</mat-label>
+    <input matInput type="text" [(ngModel)]="value">
+    <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+</mat-card>
+
 <div class="grid">
-    <ng-container *ngFor="let item of data">
-        <!-- Update with logged in User -->
-        <mat-card class="card" *ngIf="item.id != 1">
-                <mat-card-title>ID{{ item.id }}- {{ item.name }} <h4> @{{ item.username }} </h4></mat-card-title>
-                <mat-card-subtitle>{{ item.company.name }}</mat-card-subtitle>
-                <mat-card-content>EMail ID: {{ item.email }}<br>Contact No.: {{ item.phone }}</mat-card-content>
-                <mat-card-actions>
-                    <a routerLink="/profile/{{item.id}}"><button mat-raised-button color="primary">View Profile</button></a>
-                </mat-card-actions>
-        </mat-card>
-    </ng-container>
+  <ng-container *ngFor="let item of data">
+    <!-- Update with logged in User -->
+    <mat-card class="card" *ngIf="item.id != 1">
+      <mat-card-title>ID{{ item.id }}- {{ item.name }} <h4> @{{ item.username }} </h4>
+      </mat-card-title>
+      <mat-card-subtitle>{{ item.company.name }}</mat-card-subtitle>
+      <mat-card-content>EMail ID: {{ item.email }}<br>Contact No.: {{ item.phone }}</mat-card-content>
+      <mat-card-actions>
+        <a routerLink="/profile/{{item.id}}"><button mat-raised-button color="primary">View Profile</button></a>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
 </div>

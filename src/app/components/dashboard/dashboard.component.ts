@@ -8,6 +8,7 @@ import { UserServiceService } from "./service/user-service.service";
 })
 export class DashboardComponent implements OnInit {
   data:any;
+  value = '';
 
   constructor(private userData:UserServiceService) { 
     this.userData.getData().subscribe(userData => {
