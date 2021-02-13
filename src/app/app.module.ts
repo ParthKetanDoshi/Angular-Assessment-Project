@@ -30,7 +30,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 const appRoutes: Routes = [
   {path:'', component: HomeComponent},
   {path:'login', component: LoginComponent},
-  {path:'dashboard', component: DashboardComponent},
+  {path:'dashboard/:userid', component: DashboardComponent},
   {path:'profile/:id', component: ProfileComponent, children:[
     {path:'details', component: DetailsComponent},
     {path:'albums', component: AlbumsComponent},
