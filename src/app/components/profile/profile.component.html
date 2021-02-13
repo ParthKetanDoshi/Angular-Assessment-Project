@@ -1,7 +1,7 @@
 <ng-container *ngFor="let item of data">
     <ng-container *ngIf="item.id == userid">
         <div>
-            <a routerLink="/dashboard" mat-icon-button aria-label="Home Button" style="color: white;" ng-click="goHome()">
+            <a routerLink="/dashboard" mat-icon-button aria-label="Home Button" style="color: white;">
                 <mat-icon>home</mat-icon>
             </a>
             <h3>{{ item.name }}</h3><h5>@{{ item.username }}</h5>
