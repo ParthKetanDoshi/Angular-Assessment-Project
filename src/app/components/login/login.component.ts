@@ -13,8 +13,13 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onLogin(loginForm: NgForm){
-    console.log(loginForm.value)
+  onLogin(data){
+    if(data.userEmail == "Sherwood@rosamond.me" && data.password == "pass@123"){
+      console.log("Login Successful")
+    }
+    else{
+      console.log("Login Failed")
+    }
   }
 
 }
