@@ -9,6 +9,9 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatIconModule } from "@angular/material/icon";
 import { Routes, RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from "ng2-search-filter";
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -19,10 +22,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DetailsComponent } from './components/details/details.component';
 import { AlbumsComponent } from './components/albums/albums.component';
 import { PostsComponent } from './components/posts/posts.component';
-
 import { ProfileComponent } from './components/profile/profile.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+
+
 
 const appRoutes: Routes = [
   {path:'', component: HomeComponent},
@@ -60,6 +62,7 @@ const appRoutes: Routes = [
     MatGridListModule,
     MatIconModule,
     FormsModule,
+    Ng2SearchPipeModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

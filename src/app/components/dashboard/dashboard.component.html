@@ -9,7 +9,7 @@
 </mat-card>
 
 <div class="grid">
-  <ng-container *ngFor="let item of data">
+  <ng-container *ngFor="let item of data |filter:value">
     <!-- Update with logged in User -->
     <mat-card class="card" *ngIf="item.id != 1">
       <mat-card-title>ID{{ item.id }}- {{ item.name }} <h4> @{{ item.username }} </h4>
