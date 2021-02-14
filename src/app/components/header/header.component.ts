@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  loggedinusersname: string = localStorage.getItem('token2')
+  loggedinuserid: number = +(localStorage.getItem('token'));
 
   constructor(private router: Router) { }
 
