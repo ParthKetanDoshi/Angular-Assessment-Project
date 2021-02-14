@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UserfetchService } from "./service/userfetch.service";
 
 @Component({
@@ -12,7 +12,11 @@ export class ProfileComponent implements OnInit {
   data: any;
 
   constructor(private route: ActivatedRoute,
-    private userData:UserfetchService) { 
+    private userData:UserfetchService,
+    private router: Router) { 
+      if(!localStorage.getItem('token')){
+        this.router.navigate(['/login'])
+      }
       this.userData.getData().subscribe(userData => {
         // console.log(userData)
         this.data=userData
