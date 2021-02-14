@@ -24,9 +24,10 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('token2',this.usernames[(this.useremails.indexOf(data.userEmail))])
       this.router.navigate([''])
     }
-    // else{
-    //   // console.log("Login Failed")
-    // }
+    else{
+      // console.log("Login Failed")
+      window.alert("Incorrect Email ID or Password")
+    }
   }
 
 }
