@@ -7,7 +7,7 @@ import { UserServiceService } from "./service/user-service.service";
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  loggedinuserid: number;
+  loggedinuserid: number = +(localStorage.getItem('token'));
   data:any;
   value = '';
 

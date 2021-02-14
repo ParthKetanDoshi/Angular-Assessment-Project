@@ -10,7 +10,7 @@
 
 <div class="grid">
   <ng-container *ngFor="let item of data |filter:value">
-    <mat-card class="card" *ngIf="item.id != 8">
+    <mat-card class="card" *ngIf="item.id != loggedinuserid">
       <mat-card-title>ID{{ item.id }}- {{ item.name }} <h4> @{{ item.username }} </h4>
       </mat-card-title>
       <mat-card-subtitle>{{ item.company.name }}</mat-card-subtitle>
