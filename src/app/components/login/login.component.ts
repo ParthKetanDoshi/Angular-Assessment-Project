@@ -10,6 +10,7 @@ export class LoginComponent implements OnInit {
   useremails: string[] = ["Sincere@april.biz","Shanna@melissa.tv","Nathan@yesenia.net","Julianne.OConner@kory.org","Lucio_Hettinger@annie.ca","Karley_Dach@jasper.info","Telly.Hoeger@billy.biz","Sherwood@rosamond.me","Chaim_McDermott@dana.io","Rey.Padberg@karina.biz"]
   usernames: string[] = ["Leanne Graham", "Ervin Howell", "Clementine Bauch", "Patricia Lebsack", "Chelsey Dietrich", "Mrs. Dennis Schulist", "Kurtis Weissnat", "Nicholas Runolfsdottir V", "Glenna Reichert", "Clementina DuBuque"];
   loggedinuserid: string;
+  alert: boolean = false;
 
   constructor(private router: Router) { }
 
@@ -26,7 +27,8 @@ export class LoginComponent implements OnInit {
     }
     else{
       // console.log("Login Failed")
-      window.alert("Incorrect Email ID or Password")
+      // window.alert("Incorrect Email ID or Password")
+      this.alert = true;
     }
   }
 

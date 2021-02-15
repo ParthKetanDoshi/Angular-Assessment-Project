@@ -5,7 +5,7 @@
         <h2>Log In</h2>
       </mat-card-title>
     </mat-card-header>
-    <form  #loginForm='ngForm' (ngSubmit)="onLogin(loginForm.value)">
+    <form #loginForm='ngForm' (ngSubmit)="onLogin(loginForm.value)">
       <mat-form-field type="Email" appearance="outline" class="form-field">
         <mat-label>Email ID</mat-label>
         <input matInput placeholder="Please Enter your Email ID" required ngModel name="userEmail" autocomplete="off">
@@ -18,4 +18,7 @@
       <button [disabled]="!loginForm.valid" class="button" type="submit" mat-raised-button color="primary">Log In</button>
     </form>
   </mat-card>
+  <div *ngIf="alert" class="alert alert-danger" role="alert" style="margin-top:30px">
+    <strong>Warning!</strong> Incorrect EMail ID or Password
+  </div>
 </div>
