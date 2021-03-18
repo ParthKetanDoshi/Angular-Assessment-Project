@@ -17,6 +17,6 @@ p {
 }
 .container{
     overflow: auto;
-    height: 730px;
+    height: 100%;
     width: 100%;
 }
