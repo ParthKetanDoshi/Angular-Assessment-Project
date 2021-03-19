@@ -122,6 +122,15 @@
               "devServerTarget": "angular-assessment:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://parthketandoshi.github.io/Angular-Assessment-Project",
+            "repo": "https://github.com/ParthKetanDoshi/Angular-Assessment-Project",
+            "name": "Parth Doshi",
+            "email": "parthdoshi97@gmail.com"
+          }
         }
       }
     }
